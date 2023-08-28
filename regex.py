@@ -11,11 +11,14 @@ lst_space = re.search(r"\s", txt_space)
 lst_name = re.split(r"-+", txt_space)
 # if lst_space:
 #     print(lst_space.start())
-
+            #  012345
 txt_special = "$12.85"
 
 pattern = "\$(\d+\.\d+)"
 lst_only_num = re.search(pattern, txt_special)
+
+if lst_only_num:
+    print("span >>> ",lst_only_num.span(0))
 
 if lst_only_num:
     # print(lst_only_num.group(1))
